@@ -29,9 +29,9 @@
 								include("includes/connection.php");
 
 								$sql = "SELECT * FROM tblusers ORDER BY Firstname";
-								$result=mysql_query($sql); //rs.open sql,con
+								$result=mysqli_query($connection_mysql, $sql); //rs.open sql,con
 
-							while ($row=mysql_fetch_array($result))
+							while ($row=mysqli_fetch_array($result))
 							{ ?><!--open of while -->
 							<tr>
 								<td><?php echo $row['id']; ?></td>

@@ -6,12 +6,12 @@ include('includes/connection.php');
 
 $sql = "UPDATE tbladministrator SET pass='$pw' WHERE id='1'";
 
-if(mysql_query($sql))
+if(mysqli_query($sql))
 {
 	header('location:logout.php');
 }
 else
 {
-	die('Unable to update record: ' .mysql_error());
+	die('Unable to update record: ' .mysqli_error());
 }
 ?>

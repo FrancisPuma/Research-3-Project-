@@ -1,9 +1,9 @@
 <?php
 
-mysql_connect("localhost","root","") or
+mysqli_connect("localhost","root","^R1n#I19p@!Ma") or
  die('Could not connect to the database!');
+ $connection_mysql = mysqli_connect("localhost","root","^R1n#I19p@!Ma");
 
-
-mysql_select_db("PHL") or
+mysqli_select_db($connection_mysql, "phl") or
  die('No database selected!');
 ?>

@@ -5,9 +5,9 @@ $pwd = $_POST['password'];
 include 'includes/connection.php';
 
 $sql = "SELECT * FROM tbladministrator WHERE pass='$pwd'";
-$result =mysql_query($sql);
+$result = mysqli_query($connection_mysql, $sql);
 
-$num = mysql_num_rows($result);
+$num = mysqli_num_rows($result);
 
 if($num==1)
 {
@@ -18,7 +18,7 @@ if($num==1)
 else
 {
   session_start();
-  $_SESSION['msg'] = '<h2>Invalid username or password!</h2>';
+  $_SESSION['msg'] = "<h2>Invalid username or password!</h2>";
   header('location:login.php');
 }
 ?>

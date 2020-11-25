@@ -4,20 +4,20 @@ $userID = $_GET['uID'];
 	include('includes/connection.php');
 
 	$sql ="SELECT * FROM tblusers where id = '$userID'";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 
-	$num = mysql_num_rows($result);
+	$num = mysqli_num_rows($result);
 
 	$i = 0;
 
 	while ($i < $num)
 	{
-		$autoid = mysql_result($result,$i,"id");
-		$user = mysql_result($result,$i,"Username");
-		$pass = mysql_result($result,$i,"Password");
-		$fn = mysql_result($result,$i,"Firstname");
-		$ln = mysql_result($result,$i,"Lastname");
-		$email = mysql_result($result,$i,"Email");
+		$autoid = mysqli_result($result,$i,"id");
+		$user = mysqli_result($result,$i,"Username");
+		$pass = mysqli_result($result,$i,"Password");
+		$fn = mysqli_result($result,$i,"Firstname");
+		$ln = mysqli_result($result,$i,"Lastname");
+		$email = mysqli_result($result,$i,"Email");
 		$i++;
 	}
 

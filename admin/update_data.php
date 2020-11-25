@@ -10,12 +10,12 @@ include('includes/connection.php');
 
 $sql = "UPDATE tblusers SET Username='$un', Password='$pw', Firstname='$fn', Lastname='$ln', Email='$email' WHERE id='$autoid'";
 
-if(mysql_query($sql))
+if(mysqli_query($sql))
 {
 	header('location:users.php');
 }
 else
 {
-	die('Unable to update record: ' .mysql_error());
+	die('Unable to update record: ' .mysqli_error());
 }
 ?>

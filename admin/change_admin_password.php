@@ -4,14 +4,14 @@
 	include('includes/connection.php');
 
 	$sql ="SELECT * FROM tbladministrator where user = 'Administrator'";
-	$results = mysql_query($sql);
-	$no = mysql_num_rows($results);
+	$results = mysqli_query($sql);
+	$no = mysqli_num_rows($results);
 
 	$j = 0;
 
 	while ($j < $no)
 	{
-		$pass = mysql_result($results,$j,"pass");
+		$pass = mysqli_result($results,$j,"pass");
 		$j++;
 	}
 ?>
