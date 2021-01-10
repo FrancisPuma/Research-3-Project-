@@ -4,7 +4,7 @@
 	include('includes/connection.php');
 
 	$sql ="SELECT * FROM tbladministrator where user = 'Administrator'";
-	$results = mysqli_query($sql);
+	$results = mysqli_query($connection_mysql, $sql);
 	$no = mysqli_num_rows($results);
 
 	$j = 0;

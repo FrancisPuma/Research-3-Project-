@@ -1,10 +1,10 @@
 <?php
-// $un = $_POST['username'];
+$un = $_POST['username'];
 $pwd = $_POST['password'];
 
 include 'includes/connection.php';
 
-$sql = "SELECT * FROM tbladministrator WHERE pass='$pwd'";
+$sql = "SELECT * FROM tbladministrator WHERE pass='$pwd' AND user='$un'";
 $result = mysqli_query($connection_mysql, $sql);
 
 $num = mysqli_num_rows($result);

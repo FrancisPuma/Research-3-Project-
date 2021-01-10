@@ -10,7 +10,7 @@ include('includes/connection.php');
 
 $sql = "UPDATE tblusers SET Username='$un', Password='$pw', Firstname='$fn', Lastname='$ln', Email='$email' WHERE id='$autoid'";
 
-if(mysqli_query($sql))
+if(mysqli_query($connection_mysql, $sql))
 {
 	header('location:users.php');
 }

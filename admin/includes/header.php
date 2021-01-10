@@ -147,7 +147,8 @@
 								<li class="dropdown-menu-title">
  									<span>Account Settings</span>
 								</li>
-								<li><a href="change_admin_password.php?aUN=<?php echo $row['Administrator']; ?>"><i class="halflings-icon cog"></i> Change Password
+								<!--php $aUN = $row['Administrator'];-->
+								<li><a href="change_admin_password.php?"><i class="halflings-icon cog"></i> Change Password
 								</a></li>
 								<li><a href="logout.php"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>

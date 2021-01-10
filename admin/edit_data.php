@@ -4,7 +4,7 @@ $userID = $_GET['uID'];
 	include('includes/connection.php');
 
 	$sql ="SELECT * FROM tblusers where id = '$userID'";
-	$result = mysqli_query($sql);
+	$result = mysqli_query($connection_mysql, $sql);
 
 	$num = mysqli_num_rows($result);
 

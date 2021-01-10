@@ -9,7 +9,7 @@ include('includes/connection.php');
 
 $sql = "INSERT INTO tblusers VALUES(NULL,'$un','$pw','$fn','$ln','$email')";
 
-if (mysqli_query($sql))
+if (mysqli_query($connection_mysql, $sql))
 {
 	header('location:users.php');
 }
