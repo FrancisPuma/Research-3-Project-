@@ -2,12 +2,12 @@
 	require_once("functions/function.php");
 	get_header();
 	get_sidebar();
-	get_bread_two();
+	get_bread_six();
 ?>
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon white user"></i><span class="break"></span>Members</h2>
+						<h2><i class="halflings-icon white user"></i><span class="break"></span>Announcements</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -19,9 +19,12 @@
 						  <thead>
 							  <tr>
 								  <th>ID</th>
-								  <th>Firstname</th>
-								  <th>Lastname</th>
-								  <th>Contact Number</th>
+								  <th>Title/Header</th>
+								  <th>Subject</th>
+                                  <th>Uploaded Date</th>
+                                  <th>Announcement Date</th>
+								  <th>Announcement Type</th>
+                                  <th>Sent By</th>
 								  <th>Actions</th>
 							  </tr>
 						  </thead>
@@ -29,21 +32,24 @@
 							<?php
 								include("includes/connection.php");
 
-								$sql = "SELECT * FROM tblusers ORDER BY Firstname";
+								$sql = "SELECT * FROM tblannouncement ORDER BY upload_date";
 								$result=mysqli_query($connection_mysql, $sql); //rs.open sql,con
 
 							while ($row=mysqli_fetch_array($result))
 							{ ?><!--open of while -->
 							<tr>
-								<td><?php echo $row['id']; ?></td>
-								<td><?php echo $row['Firstname']; ?></td>
-								<td><?php echo $row['Lastname']; ?></td>
-								<td><?php echo $row['Contact']; ?></td>
+								<td><?php echo $row['announcement_id']; ?></td>
+								<td><?php echo $row['header']; ?></td>
+								<td><?php echo $row['subject']; ?></td>
+								<td><?php echo $row['upload_date']; ?></td>
+                                <td><?php echo $row['send_date']; ?></td>
+                                <td><?php echo $row['announcement_type']; ?></td>
+                                <td><?php echo $row['upload_name']; ?></td>
 								<td class="center">
-									<a class="btn btn-info" href="edit_data.php?uID=<?php echo $row['id']; ?>">
+									<a class="btn btn-info" href="edit_data.php?uID=<?php echo $row['announcement_id']; ?>">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" onclick="return confirmDel()" href="delete_data.php?delID=<?php echo $row['id'];?>">
+									<a class="btn btn-danger" onclick="return confirmDel()" href="delete_announcement.php?delID=<?php echo $row['announcement_id'];?>">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>
@@ -59,14 +65,4 @@
 			</div><!--/row-->
 <?php
 	get_footer();
-?>		
-
-	
-<!-- 	<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<ul class="list-inline item-details">
-				<li><a href="http://themifycloud.com">Admin templates</a></li>
-				<li><a href="http://themescloud.org">Bootstrap themes</a></li>
-			</ul>
-		</div>
-	</div> -->
+?>

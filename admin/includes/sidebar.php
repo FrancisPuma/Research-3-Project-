@@ -12,13 +12,23 @@
 				<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
 				<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li> -->
 				<li>
-					<a class="dropmenu" href="#"><i class="icon-reorder"></i><span class="hidden-tablet"> Test Function</span></a>
+					<a class="dropmenu" href="#"><i class="icon-reorder"></i><span class="hidden-tablet"> Records</span></a>
 					<ul>
 						<li><a class="submenu" href="add_new.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add New Record</span></a></li>
-						<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-						<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+				<!--	<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
+						<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li> -->
 					</ul>	
 				</li>
+
+				<li>
+					<a class="dropmenu" href="#"><i class="icon-bullhorn"></i><span class="hidden-tablet"> Announcements</span></a>
+					<ul>
+						<li><a class="submenu" href="add_new_announcement.php"><i class="icon-plus-sign-alt"></i><span class="hidden-tablet"> Create New</span></a></li>
+						<li><a class="submenu" href="view_announcement.php"><i class="icon-inbox"></i><span class="hidden-tablet"> View Announcements</span></a></li>
+						<li><a class="submenu" href="submenu3.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Schedules</span></a></li>
+					</ul>	
+				</li>
+				
 				<li><a href="logout.php"><i class="icon-off"></i><span class="hidden-tablet"> Logout</span></a></li>
 <!-- 				<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
 				<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>

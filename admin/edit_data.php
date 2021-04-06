@@ -13,11 +13,10 @@ $userID = $_GET['uID'];
 	while ($i < $num)
 	{
 		$autoid = mysqli_result($result,$i,"id");
-		$user = mysqli_result($result,$i,"Username");
-		$pass = mysqli_result($result,$i,"Password");
+		$position = mysqli_result($result,$i,"Position");
+		$contact = mysqli_result($result,$i,"Contact");
 		$fn = mysqli_result($result,$i,"Firstname");
 		$ln = mysqli_result($result,$i,"Lastname");
-		$email = mysqli_result($result,$i,"Email");
 		$i++;
 	}
 
@@ -40,23 +39,9 @@ $userID = $_GET['uID'];
 						<form class="form-horizontal" method="post" action="update_data.php">
 							<fieldset>
 							  <div class="control-group">
-								<label class="control-label" for="focusedInput">Username:</label>
-								<div class="controls">
-								  <input class="input-xlarge focused" name="txtusername" id="focusedInput" type="text" placeholder="Username" 
-								  value="<?php echo $user; ?>">
-								</div>
-							  </div>
-							  <div class="control-group">
-								<label class="control-label" for="focusedInput">Password:</label>
-								<div class="controls">
-								  <input class="input-xlarge focused" name="txtpassword" id="focusedInput" type="password" placeholder="Password"
-								  value="<?php echo $pass; ?>">
-								</div>
-							  </div>
-							  <div class="control-group">
 								<label class="control-label" for="focusedInput">Firstname:</label>
 								<div class="controls">
-								  <input class="input-xlarge focused" name="txtfirstname" id="focusedInput" type="text" placeholder="Firstname"
+								  <input class="input-xlarge focused" name="txtfirstname" id="focusedInput" type="text" placeholder="Firstname" 
 								  value="<?php echo $fn; ?>">
 								</div>
 							  </div>
@@ -68,10 +53,85 @@ $userID = $_GET['uID'];
 								</div>
 							  </div>
 							  <div class="control-group">
-								<label class="control-label" for="focusedInput">Email:</label>
+								<label class="control-label" for="focusedInput">Contact Number:</label>
 								<div class="controls">
-								  <input class="input-xlarge focused" name="txtemail" id="focusedInput" type="text" placeholder="Email"
-								  value="<?php echo $email; ?>">
+								  <input class="input-xlarge focused" name="txtcontact" id="focusedInput" type="text" placeholder="11-digits no space (e.g. 09853452441)"
+								  value="<?php echo $contact; ?>">
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Position/Role:</label>
+								<div class="controls">
+									<label class="radio inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="student" checked>
+										Student
+									</label>
+									<label class="radio inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="staff">
+										Staff
+									</label>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Grade:</label>
+								<div class="controls">
+									<select name='txtgrade'>
+										<option value="N/A">N/A</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Section:</label>
+								<div class="controls">
+									<select name='txtsection'>
+										<option value="N/A">N/A</option>
+										<option value="Diamond">Diamond</option>
+										<option value="Emerald">Emerald</option>
+										<option value="Garnet">Garnet</option>
+										<option value="Jade">Jade</option>
+										<option value="Opal">Opal</option>
+										<option value="Ruby">Ruby</option>
+										<option value="Sapphire">Sapphire</option>
+										<option value="Topaz">Topaz</option>
+										<option value="Adelfa">Adelfa</option>
+										<option value="Camia">Camia</option>
+										<option value="Champaca">Champaca</option>
+										<option value="Dahlia">Dahlia</option>
+										<option value="Ilang-Ilang">Ilang-Ilang</option>
+										<option value="Jasmin">Jasmin</option>
+										<option value="Rosal">Rosal</option>
+										<option value="Sampaguita">Sampaguita</option>
+										<option value="Beryllium">Beryllium</option>
+										<option value="Cesium">Cesium</option>
+										<option value="Lithium">Lithium</option>
+										<option value="Magnesium">Magnesium</option>
+										<option value="Potassium">Potassium</option>
+										<option value="Rubidium">Rubidium</option>
+										<option value="Sodium">Sodium</option>
+										<option value="Strontium">Strontium</option>
+										<option value="Charm">Charm</option>
+										<option value="Electron">Electron</option>
+										<option value="Gluon">Gluon</option>
+										<option value="Graviton">Graviton</option>
+										<option value="Muon">Muon</option>
+										<option value="Photon">Photon</option>
+										<option value="Tau">Tau</option>
+										<option value="Truth">Truth</option>
+										<option value="Block-A">Block-A</option>
+										<option value="Block-B">Block-B</option>
+										<option value="Block-C">Block-C</option>
+										<option value="Block-D">Block-D</option>
+										<option value="Block-E">Block-E</option>
+										<option value="Block-F">Block-F</option>
+										<option value="Block-G">Block-G</option>
+										<option value="Block-H">Block-H</option>
+									</select>
 								</div>
 							  </div>
 							  <div class="form-actions">
