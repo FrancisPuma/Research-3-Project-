@@ -17,6 +17,8 @@ $userID = $_GET['uID'];
 		$contact = mysqli_result($result,$i,"Contact");
 		$fn = mysqli_result($result,$i,"Firstname");
 		$ln = mysqli_result($result,$i,"Lastname");
+		$grade = mysqli_result($result,$i,"Grade");
+		$section = mysqli_result($result,$i,"Section");
 		$i++;
 	}
 
@@ -63,11 +65,11 @@ $userID = $_GET['uID'];
 								<label class="control-label" for="focusedInput">Position/Role:</label>
 								<div class="controls">
 									<label class="radio inline">
-										<input type="radio" name="optionsRadios" id="optionsRadios1" value="student" checked>
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="student" <?php echo ($position =="student")? 'checked':'' ?>>
 										Student
 									</label>
 									<label class="radio inline">
-										<input type="radio" name="optionsRadios" id="optionsRadios2" value="staff">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="staff" <?php echo ($position =="staff")? 'checked':'' ?>>
 										Staff
 									</label>
 								</div>
@@ -76,13 +78,13 @@ $userID = $_GET['uID'];
 								<label class="control-label" for="focusedInput">Grade:</label>
 								<div class="controls">
 									<select name='txtgrade'>
-										<option value="N/A">N/A</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
+										<option value="N/A" <?php echo ($grade =="N/A")? 'selected':'' ?>>N/A</option>
+										<option value="7" <?php echo ($grade =="7")? 'selected':'' ?>>7</option>
+										<option value="8" <?php echo ($grade =="8")? 'selected':'' ?>>8</option>
+										<option value="9" <?php echo ($grade =="9")? 'selected':'' ?>>9</option>
+										<option value="10" <?php echo ($grade =="10")? 'selected':'' ?>>10</option>
+										<option value="11" <?php echo ($grade =="11")? 'selected':'' ?>>11</option>
+										<option value="12" <?php echo ($grade =="12")? 'selected':'' ?>>12</option>
 									</select>
 								</div>
 							  </div>
@@ -90,47 +92,47 @@ $userID = $_GET['uID'];
 								<label class="control-label" for="focusedInput">Section:</label>
 								<div class="controls">
 									<select name='txtsection'>
-										<option value="N/A">N/A</option>
-										<option value="Diamond">Diamond</option>
-										<option value="Emerald">Emerald</option>
-										<option value="Garnet">Garnet</option>
-										<option value="Jade">Jade</option>
-										<option value="Opal">Opal</option>
-										<option value="Ruby">Ruby</option>
-										<option value="Sapphire">Sapphire</option>
-										<option value="Topaz">Topaz</option>
-										<option value="Adelfa">Adelfa</option>
-										<option value="Camia">Camia</option>
-										<option value="Champaca">Champaca</option>
-										<option value="Dahlia">Dahlia</option>
-										<option value="Ilang-Ilang">Ilang-Ilang</option>
-										<option value="Jasmin">Jasmin</option>
-										<option value="Rosal">Rosal</option>
-										<option value="Sampaguita">Sampaguita</option>
-										<option value="Beryllium">Beryllium</option>
-										<option value="Cesium">Cesium</option>
-										<option value="Lithium">Lithium</option>
-										<option value="Magnesium">Magnesium</option>
-										<option value="Potassium">Potassium</option>
-										<option value="Rubidium">Rubidium</option>
-										<option value="Sodium">Sodium</option>
-										<option value="Strontium">Strontium</option>
-										<option value="Charm">Charm</option>
-										<option value="Electron">Electron</option>
-										<option value="Gluon">Gluon</option>
-										<option value="Graviton">Graviton</option>
-										<option value="Muon">Muon</option>
-										<option value="Photon">Photon</option>
-										<option value="Tau">Tau</option>
-										<option value="Truth">Truth</option>
-										<option value="Block-A">Block-A</option>
-										<option value="Block-B">Block-B</option>
-										<option value="Block-C">Block-C</option>
-										<option value="Block-D">Block-D</option>
-										<option value="Block-E">Block-E</option>
-										<option value="Block-F">Block-F</option>
-										<option value="Block-G">Block-G</option>
-										<option value="Block-H">Block-H</option>
+										<option value="N/A" <?php echo ($section =="N/A")? 'selected':'' ?>>N/A</option>
+										<option value="Diamond" <?php echo ($section =="Diamond")? 'selected':'' ?>>Diamond</option>
+										<option value="Emerald" <?php echo ($section =="Emerald")? 'selected':'' ?>>Emerald</option>
+										<option value="Garnet" <?php echo ($section =="Garnet")? 'selected':'' ?>>Garnet</option>
+										<option value="Jade" <?php echo ($section =="Jade")? 'selected':'' ?>>Jade</option>
+										<option value="Opal" <?php echo ($section =="Opal")? 'selected':'' ?>>Opal</option>
+										<option value="Ruby" <?php echo ($section =="Ruby")? 'selected':'' ?>>Ruby</option>
+										<option value="Sapphire" <?php echo ($section =="Sapphire")? 'selected':'' ?>>Sapphire</option>
+										<option value="Topaz" <?php echo ($section =="Topaz")? 'selected':'' ?>>Topaz</option>
+										<option value="Adelfa" <?php echo ($section =="Adelfa")? 'selected':'' ?>>Adelfa</option>
+										<option value="Camia" <?php echo ($section =="Camia")? 'selected':'' ?>>Camia</option>
+										<option value="Champaca" <?php echo ($section =="Champaca")? 'selected':'' ?>>Champaca</option>
+										<option value="Dahlia" <?php echo ($section =="Dahlia")? 'selected':'' ?>>Dahlia</option>
+										<option value="Ilang-Ilang" <?php echo ($section =="Ilang-Ilang")? 'selected':'' ?>>Ilang-Ilang</option>
+										<option value="Jasmin" <?php echo ($section =="Jasmin")? 'selected':'' ?>>Jasmin</option>
+										<option value="Rosal" <?php echo ($section =="Rosal")? 'selected':'' ?>>Rosal</option>
+										<option value="Sampaguita" <?php echo ($section =="Sampaguita")? 'selected':'' ?>>Sampaguita</option>
+										<option value="Beryllium" <?php echo ($section =="Beryllium")? 'selected':'' ?>>Beryllium</option>
+										<option value="Cesium" <?php echo ($section =="Cesium")? 'selected':'' ?>>Cesium</option>
+										<option value="Lithium" <?php echo ($section =="Lithium")? 'selected':'' ?>>Lithium</option>
+										<option value="Magnesium" <?php echo ($section =="Magnesium")? 'selected':'' ?>>Magnesium</option>
+										<option value="Potassium" <?php echo ($section =="Potassium")? 'selected':'' ?>>Potassium</option>
+										<option value="Rubidium" <?php echo ($section =="Rubidium")? 'selected':'' ?>>Rubidium</option>
+										<option value="Sodium" <?php echo ($section =="Sodium")? 'selected':'' ?>>Sodium</option>
+										<option value="Strontium" <?php echo ($section =="Strontium")? 'selected':'' ?>>Strontium</option>
+										<option value="Charm" <?php echo ($section =="Charm")? 'selected':'' ?>>Charm</option>
+										<option value="Electron" <?php echo ($section =="Electron")? 'selected':'' ?>>Electron</option>
+										<option value="Gluon" <?php echo ($section =="Gluon")? 'selected':'' ?>>Gluon</option>
+										<option value="Graviton" <?php echo ($section =="Graviton")? 'selected':'' ?>>Graviton</option>
+										<option value="Muon" <?php echo ($section =="Muon")? 'selected':'' ?>>Muon</option>
+										<option value="Photon" <?php echo ($section =="Photon")? 'selected':'' ?>>Photon</option>
+										<option value="Tau" <?php echo ($section =="Tau")? 'selected':'' ?>>Tau</option>
+										<option value="Truth" <?php echo ($section =="Truth")? 'selected':'' ?>>Truth</option>
+										<option value="Block-A" <?php echo ($section =="Block-A")? 'selected':'' ?>>Block-A</option>
+										<option value="Block-B" <?php echo ($section =="Block-B")? 'selected':'' ?>>Block-B</option>
+										<option value="Block-C" <?php echo ($section =="Block-C")? 'selected':'' ?>>Block-C</option>
+										<option value="Block-D" <?php echo ($section =="Block-D")? 'selected':'' ?>>Block-D</option>
+										<option value="Block-E" <?php echo ($section =="Block-E")? 'selected':'' ?>>Block-E</option>
+										<option value="Block-F" <?php echo ($section =="Block-F")? 'selected':'' ?>>Block-F</option>
+										<option value="Block-G" <?php echo ($section =="Block-G")? 'selected':'' ?>>Block-G</option>
+										<option value="Block-H" <?php echo ($section =="Block-H")? 'selected':'' ?>>Block-H</option>
 									</select>
 								</div>
 							  </div>

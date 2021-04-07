@@ -46,7 +46,7 @@
                                 <td><?php echo $row['announcement_type']; ?></td>
                                 <td><?php echo $row['upload_name']; ?></td>
 								<td class="center">
-									<a class="btn btn-info" href="edit_data.php?uID=<?php echo $row['announcement_id']; ?>">
+									<a class="btn btn-info" href="edit_announcement.php?aID=<?php echo $row['announcement_id']; ?>">
 										<i class="halflings-icon white edit"></i>  
 									</a>
 									<a class="btn btn-danger" onclick="return confirmDel()" href="delete_announcement.php?delID=<?php echo $row['announcement_id'];?>">

@@ -9,7 +9,8 @@
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Create New Announcement</h2>
 						<div class="box-icon">
-							<a href="users.php" class="btn-close"><i class="halflings-icon white remove"></i></a><!--replace users.php with announcement view-->
+							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+							<a href="view_announcement.php" class="btn-close"><i class="halflings-icon white remove"></i></a><!--replace users.php with announcement view-->
 						</div>
 					</div>
 					<div class="box-content">
@@ -65,7 +66,7 @@
 							  <div class="control-group">
 								<label class="control-label" for="focusedInput">From:</label>
 								<div class="controls">
-								  <input class="input-xlarge focused" name="txtupload" id="focusedInput" type="text" placeholder="Name of sender/office">
+								  <input class="input-xlarge focused" name="txtupload" id="focusedInput" type="text" placeholder="Name of sender/office" required>
 								</div>
 							  </div>
 							  <div class="control-group">

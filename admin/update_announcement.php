@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Manila');
+$autoid = $_POST['hid'];
 $tl = $_POST['txttitle'];
 $sj = $_POST['txtsubject'];
 $msg = $_POST['txtmessage'];
@@ -19,12 +20,13 @@ $sectionSYP = isset($_POST['checkboxSectionSYP']) ? $_POST['checkboxSectionSYP']
 
 include('includes/connection.php');
 
-
-$sql1 = "INSERT INTO tblannouncement VALUES(NULL,'$tl','$sj','$msg','$ud','$ut','$sd','$st','$un','$type')";
+$sql1 = "UPDATE tblannouncement SET header='$tl', subject='$sj', content='$msg', upload_date='$ud', upload_time='$ut', send_date='$sd', send_time='$st', upload_name='$un', announcement_type='$type'  WHERE announcement_id='$autoid'";
+$sql3 = "DELETE FROM tblidentifier WHERE announcement_id='$autoid'";
 
 if (mysqli_query($connection_mysql, $sql1))
 {
-	$last_id = mysqli_insert_id($connection_mysql);
+	mysqli_query($connection_mysql, $sql3);
+    $last_id = $autoid;
     if(!empty($role))
 	{  
 		foreach ($role as $chk1)  
@@ -106,14 +108,17 @@ else
 {
 	die('Unable to insert data:' .mysqli_error());
 }
-
 ?>
+
 <!-- 
-$sj = $_POST['txtsubject'];
-$msg = $_POST['txtmessage'];
-$ud = date('Y-m-d');
-$ut = date('H:i:s');
-$sd = $_POST['txtdate'];
-$st = $_POST['txttime'];
-$up = $_POST['txtupload'];
+$sql = "UPDATE tblannouncement SET Firstname='$fn', Lastname='$ln', Contact='$cn', Position='$pr', Grade='$grade', Section='$section' WHERE announcement_id='$autoid'";
+
+if(mysqli_query($connection_mysql, $sql))
+{
+	header('location:users.php');
+}
+else
+{
+	die('Unable to update record: ' .mysqli_error());
+} 
 -->

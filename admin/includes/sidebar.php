@@ -25,7 +25,7 @@
 					<ul>
 						<li><a class="submenu" href="add_new_announcement.php"><i class="icon-plus-sign-alt"></i><span class="hidden-tablet"> Create New</span></a></li>
 						<li><a class="submenu" href="view_announcement.php"><i class="icon-inbox"></i><span class="hidden-tablet"> View Announcements</span></a></li>
-						<li><a class="submenu" href="submenu3.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Schedules</span></a></li>
+				<!--	<li><a class="submenu" href="submenu3.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Schedules</span></a></li> -->
 					</ul>	
 				</li>
 				

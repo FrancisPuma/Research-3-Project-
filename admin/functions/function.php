@@ -20,6 +20,9 @@
 	function get_bread_six(){
 		require_once("includes/breadcumb_six.php");
 	}
+	function get_bread_seven(){
+		require_once("includes/breadcumb_seven.php");
+	}
 	function get_sidebar(){
 		require_once("includes/sidebar.php");
 	}
